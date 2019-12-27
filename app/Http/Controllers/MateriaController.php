@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Session;
+
 
 class MateriaController extends Controller
 {
@@ -24,7 +26,7 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        //
+        return "Hola Jay";
     }
 
     /**
@@ -57,7 +59,8 @@ class MateriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        Session::put('Nombre','Juan');
+        return $id." ".Session::get('Nombre');
     }
 
     /**
